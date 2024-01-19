@@ -1,19 +1,14 @@
 import Image from 'next/image'
-import Link from 'next/link'
+import Header from './components/layout/Header'
+import Hero from './components/layout/Hero'
+import HomeMenu from './components/layout/HomeMenu'
 
 export default function Home() {
   return (
     <>
-      <header>
-        <Link className='text-primary text-3xl font-semibold' href=''>ST PIZZA</Link>
-        <nav>
-          <Link href={''}>Home</Link>
-          <Link href={''}>Menu</Link>
-          <Link href={''}>About</Link>
-          <Link href={''}>Contact</Link>
-          <Link href={''}>Login</Link>
-        </nav>
-      </header>
+      <Header/>
+      <Hero/>
+      <HomeMenu/>
     </>
       )
 }
