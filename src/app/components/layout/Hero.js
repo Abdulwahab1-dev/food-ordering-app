@@ -4,11 +4,11 @@ import Right from "../icons/Right";
 
 const Hero = () => {
   return (
-    <section className="flex justify-center items-center flex-col mt-[4rem] px-[2rem] h-100 md:h-[100vh] md:mt-[0rem] md:px-[0rem] ">
+    <section className="flex justify-center items-center flex-col mt-[4rem] px-[2rem] h-100 md:h-[100vh] md:mt-[0rem] md:px-[0rem]">
       <div className="grid md:grid-cols-2 gap-8">
-        <div className="flex justify-center items-start flex-col max-w-4xl mx-auto  ">
+        <div className="flex justify-center items-start flex-col max-w-4xl mx-auto">
           <h1 className="text-3xl lg:text-4xl xl:text-5xl font-semibold py-4">
-            Everything is better with a Pizza
+            Everything is better with a Pizza&apos;s aroma
           </h1>
           <p className="text-sm lg:text-base text-justify">
             Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -44,4 +44,3 @@ const Hero = () => {
 };
 
 export default Hero;
-
