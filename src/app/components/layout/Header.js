@@ -1,43 +1,60 @@
-// import React from 'react'
-// import Link from 'next/link'
-// const Header = () => {
-//   return (
-//    <>
-//     <header className='flex items-center justify-between'>
-//         <Link className='text-primary text-3xl font-semibold' href=''>ST PIZZA</Link>
-//         <nav className='flex items-center gap-8 text-gray-700 font-semibold'>
-//           <Link href={''}>Home</Link>
-//           <Link href={''}>Menu</Link>
-//           <Link href={''}>About</Link>
-//           <Link href={''}>Contact</Link>
-//           <Link href={''} className='bg-primary text-white px-8 py-2 rounded-full' >Login</Link>
-//         </nav>
-//       </header>
-//    </>
-//   )
-// }
-
-// export default Header
-import React from 'react';
-import Link from 'next/link';
+"use client";
+import React, { useState } from "react";
+import Link from "next/link";
+import Image from "next/image";
+import Pizza from "../icons/Pizza";
+import Mobileicons from "../icons/Mobileicons";
+import Close from "../icons/Close";
 
 const Header = () => {
+  const [open, setOpen] = useState(false);
+
   return (
-    <header className='flex items-center justify-between p-4 lg:p-8'>
-      <Link href='/' passHref>
-        <h1 className='text-primary text-2xl lg:text-4xl font-semibold'>
-          ST PIZZA
-        </h1>
-      </Link>
-      <nav className='hidden lg:flex items-center gap-8 text-gray-700 font-semibold'>
-        <Link href='/'>Home</Link>
-        <Link href='/menu'>Menu</Link>
-        <Link href='/about'>About</Link>
-        <Link href='/contact'>Contact</Link>
-        <Link href='/login' className='bg-primary text-white px-4 py-2 rounded-full'>
-          Login
-        </Link>
-      </nav>
+    <header>
+      <div className="shadow-md w-full fixed top-0 left-0">
+        <div className="shadow-md pb-[1rem] relative md:flex md:items-center md:justify-between px-[0.2rem] md:px-[4rem] md:pb-[1rem] md:py-[1rem] bg-white">
+          <div className="flex md:justify-center items-center px-[1rem] pt-[1rem] md:pt-[0rem] ">
+            <Pizza width={45} />
+            <Link href="/" passHref>
+              <h1 className="text-primary text-[1.2rem] lg:text-3xl font-semibold md:text-2xl mt-[0.5rem]">
+                ST PIZZA
+              </h1>
+            </Link>
+          </div>
+          <div
+            onClick={() => setOpen(!open)}
+            className="text-3xl absolute right-8 top-8 cursor-pointer md:hidden"
+          >
+            {open ? <Close /> : <Mobileicons /> }
+          </div>
+          <nav
+            className={`flex flex-col px-[2rem] pt-[0.666rem] pb-[2rem] gap-8 absolute bg-white z-[-1] left-0 w-full 
+          md:w-auto transition-all duration-500 ease-in md:z-auto md:flex md:items-center md:flex-row md:mt-[1rem] md:static md:gap-8
+           text-gray-700 font-semibold  ${
+             open ? `top-[5rem]  h-auto` : `top-[-14rem] h-[0px]`
+           }`}
+          >
+            <Link href="/" className="hover:text-primary">
+              Home
+            </Link>
+            <Link href="/menu" className="hover:text-primary">
+              Menu
+            </Link>
+            <Link href="/about" className="hover:text-primary">
+              About
+            </Link>
+            <Link href="/contact" className="hover:text-primary">
+              Contact
+            </Link>
+            <Link
+              href="/login"
+              className="bg-primary text-white text-center px-4 py-2 rounded-full w-[7rem] md:w-full "
+            >
+              Login
+            </Link>
+          </nav>
+        </div>
+      </div>
     </header>
   );
 };
