@@ -8,11 +8,11 @@ const Hero = () => {
       <div className="grid md:grid-cols-2 gap-8">
         <div className="flex justify-center items-start flex-col max-w-4xl mx-auto">
           <h1 className="text-3xl lg:text-4xl xl:text-5xl font-semibold py-4">
-            Everything is better with a Pizza
+            Everything is better with a Pizza &apos;
           </h1>
           <p className="text-sm lg:text-base text-justify">
             Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
+            industry. Lorem Ipsum has been the industry quote: &apos;s standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
             and scrambled it to make a type specimen book.
           </p>
