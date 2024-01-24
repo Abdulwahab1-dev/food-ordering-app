@@ -29,21 +29,21 @@ const Header = () => {
           </div>
           <nav
             className={`flex flex-col px-[2rem] pt-[0.666rem] pb-[2rem] gap-8 absolute bg-white z-[-1] left-0 w-full 
-          md:w-auto transition-all duration-500 ease-in md:z-auto md:flex md:items-center md:flex-row md:mt-[1rem] md:static md:gap-8
+          md:w-auto transition-all duration-500 ease-in-out md:z-auto md:flex md:items-center md:flex-row md:mt-[1rem] md:static md:gap-8
            text-gray-700 font-semibold  ${
-             open ? `top-[5rem]  h-auto` : `top-[-14rem] h-[0px]`
+             open ? `top-[5rem]  h-auto` : `top-[-19rem] h-[0px]`
            }`}
           >
             <Link href="/" className="hover:text-primary">
               Home
             </Link>
-            <Link href="/menu" className="hover:text-primary">
+            <Link href="/" className="hover:text-primary">
               Menu
             </Link>
-            <Link href="/about" className="hover:text-primary">
+            <Link href="/" className="hover:text-primary">
               About
             </Link>
-            <Link href="/contact" className="hover:text-primary">
+            <Link href="/" className="hover:text-primary">
               Contact
             </Link>
             <Link
@@ -51,6 +51,12 @@ const Header = () => {
               className="bg-primary text-white text-center px-4 py-2 rounded-full w-[7rem] md:w-full "
             >
               Login
+            </Link>
+            <Link
+              href="/register"
+              className="bg-primary text-white text-center px-4 py-2 rounded-full w-[7rem] md:w-full "
+            >
+              Register
             </Link>
           </nav>
         </div>
